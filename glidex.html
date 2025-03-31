@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlideX – Autonomous Robot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #000000;
+      color: #e0d7f8;
+      font-family: 'Inter', sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #6b21a8, #9333ea);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      color: #f3e8ff;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #1a122d;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .features-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .feature-card {
+      background: #2e1d49;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 12px rgba(147, 51, 234, 0.1);
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #e9d5ff;
+    }
+    ul.timeline {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    ul.timeline li {
+      margin: 0.75rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    ul.timeline li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 10px;
+      height: 10px;
+      background: #9333ea;
+      border-radius: 50%;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #1e1b2e;
+      color: #d8b4fe;
+    }
+    a.button {
+      display: inline-block;
+      background: #9333ea;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #7e22ce;
+    }
+    @keyframes dramaticFadeIn {
+      0% { opacity: 0; filter: blur(10px); letter-spacing: 0.2em; }
+      100% { opacity: 1; filter: blur(0); letter-spacing: normal; }
+    }
+    .intro-title {
+      font-size: 5rem;
+      font-weight: 900;
+      color: #c084fc;
+      opacity: 0;
+      animation: introZoomFade 2s ease-out forwards;
+    }
+    @keyframes introZoomFade {
+      0% { opacity: 0; transform: scale(0.7); filter: blur(10px); }
+      50% { opacity: 1; transform: scale(1.05); filter: blur(0); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeOutIntro {
+      to { opacity: 0; visibility: hidden; }
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    a.button:hover {
+      box-shadow: 0 0 12px #9333ea, 0 0 24px #9333ea;
+      transform: scale(1.05);
+    }
+    @keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+  <div id="intro-screen" style="position: fixed; inset: 0; background: #111111; z-index: 9999; display: flex; align-items: center; justify-content: center; animation: fadeOutIntro 1.5s ease 3s forwards;">
+  <img src="https://i.imgur.com/UhNMMT5.png" alt="GlideX Fullscreen Logo" style="width: 100%; height: 100%; object-fit: cover; background-color: #000000; opacity: 0; animation: logoFadeIn 2s ease forwards 0.5s;">
+</div>
+  <header style="text-align: center; padding: 2rem 1rem; background: #000000;">
+  <img src="https://i.imgur.com/Sy9ZVoc.png" alt="GlideX Logo" style="max-width: 250px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 10px #9333ea);">
+  <p style="color: #9333ea; font-size: 1.1rem;">"Where AI Meets the Aisle"</p>
+  <a href="final portfolia.html" class="button" style="background: #9333ea;">&larr; Back to Portfolio</a>
+</header>
+  <section>
+    <h2>About GlideX</h2>
+    <p>GlideX is a compact, intelligent robot built to transform the way warehouses operate. It blends automation and design to create an intuitive solution that saves time and reduces effort. With a strong focus on efficiency and ease of use, GlideX takes on the hard work—so you can focus on what matters. It’s robotics made practical.</p>
+  </section>
+  <section>
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Mecanum Wheel Control</h3>
+        <p>Precise, omnidirectional movement — perfect for tight spaces and smooth maneuvers in real-time.</p>
+      </div>
+      <div class="feature-card">
+        <h3>LiDAR-Based SLAM Navigation</h3>
+        <p>Real-time mapping + localization using YDLIDAR T-mini Plus for autonomous exploration and pathfinding.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI-Powered Object Detection</h3>
+        <p>YOLOv8 + OpenCV to identify, verify, and classify items in real time for seamless automation.</p>
+      </div>
+      <div class="feature-card">
+        <h3>5-DOF Robotic Arm</h3>
+        <p>Flexible arm replaces conveyors — picks and places packages with AI-guided precision.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Web-Based Dashboard</h3>
+        <p>Flask-based control UI lets you monitor, dispatch, and control GlideX from any browser, in real time.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Touchscreen Kiosk</h3>
+        <p>Mounted interface for local manual control, system status, and dispatch from warehouse floor.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+  <h2>Hardware & Software Stack</h2>
+  <ul class="timeline">
+    <li>Raspberry Pi 5 (8GB)</li>
+    <li>YDLIDAR T-mini Plus</li>
+    <li>Pi Camera Module 3 NoIR – Wide</li>
+    <li>L298N Motor Drivers + 4 Mecanum Wheels</li>
+    <li>Actuator + Conveyor Motor</li>
+    <li>Battery Pack – 4S2P Molicel Li-ion</li>
+    <li>Python, OpenCV, YOLOv8, Flask, pigpio</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Project Timeline</h2>
+  <div style="position: relative; padding-left: 3rem; border-left: 3px dashed #9333ea;">
+    <div style="position: relative; margin-bottom: 3rem;">
+      <div style="position: absolute; left: -1.4rem; top: 0.3rem; width: 1rem; height: 1rem; background: #9333ea; border-radius: 50%;"></div>
+      <h3 style="margin: 0; color: #c084fc;">Jan 2025</h3>
+      <p>Prototype design & component selection</p>
+    </div>
+    <div style="position: relative; margin-bottom: 3rem;">
+      <div style="position: absolute; left: -1.4rem; top: 0.3rem; width: 1rem; height: 1rem; background: #9333ea; border-radius: 50%;"></div>
+      <h3 style="margin: 0; color: #c084fc;">Feb 2025</h3>
+      <p>Hardware integration + motion testing</p>
+    </div>
+    <div style="position: relative; margin-bottom: 3rem;">
+      <div style="position: absolute; left: -1.4rem; top: 0.3rem; width: 1rem; height: 1rem; background: #9333ea; border-radius: 50%;"></div>
+      <h3 style="margin: 0; color: #c084fc;">Mar 2025</h3>
+      <p>SLAM & navigation logic complete</p>
+    </div>
+    <div style="position: relative; margin-bottom: 3rem;">
+      <div style="position: absolute; left: -1.4rem; top: 0.3rem; width: 1rem; height: 1rem; background: #9333ea; border-radius: 50%;"></div>
+      <h3 style="margin: 0; color: #c084fc;">Apr 2025</h3>
+      <p>Object detection & AI integration</p>
+    </div>
+    <div style="position: relative;">
+      <div style="position: absolute; left: -1.4rem; top: 0.3rem; width: 1rem; height: 1rem; background: #9333ea; border-radius: 50%;"></div>
+      <h3 style="margin: 0; color: #c084fc;">May 2025</h3>
+      <p>UI dashboard + system testing</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Project Journal</h2>
+  <div style="background: #2e1d49; padding: 2rem; border-radius: 12px;">
+    <p style="color: #d8b4fe; font-style: italic; font-size: 0.95rem;">Last updated: <span id="last-updated">March 31, 2025</span></p>
+    <div style="padding: 1rem; border: 1px solid #9333ea; border-radius: 8px; background: #1a0f2b;">
+      <h3 style="color: #e9d5ff; margin-bottom: 0.5rem;">Building GlideX – The Autonomous Warehouse Robot</h3>
+      <p>Over the past few months, I’ve been working on building something I’ve always wanted to bring to life — an autonomous robot that could handle warehouse operations like product pickup, sorting, and dispatch, all by itself. That’s how Glide X was born.</p>
+      <p>Glide X is a 4-wheeled robot designed to navigate like a pro, recognize objects using AI, and physically interact with its environment using an actuator and a robotic arm. It’s meant to automate the entire process of picking up a product, verifying it, loading it, and dropping it off at the dispatch zone — all based on commands sent from a web interface.</p>
+      <h4 style="color: #c084fc; margin-top: 1.5rem;">The Hardware Setup</h4>
+      <p>The robot moves on Mecanum wheels, which allow it to move in any direction — forward, backward, sideways, and diagonally — making it perfect for tight warehouse spaces. The control system is handled by a Raspberry Pi 5 (8GB), powered safely using a 4S2P 14.8V Li-ion battery pack and regulated with DC-DC step-down converters and a UBEC for 5V power.</p>
+      <p>So far, I’ve wired up and tested the basic motor system using L298N motor drivers, and I’ve worked out the control logic so that each wheel responds correctly. One of the motors (rear right) was slower than the others, so I had to compensate for that in the code by running it at a higher duty cycle.</p>
+      <h4 style="color: #c084fc; margin-top: 1.5rem;">Making It Smart</h4>
+      <p>The brain of the bot is where things get fun. Glide X uses a YDLIDAR T-mini Plus for mapping its surroundings and enabling autonomous movement. I’m setting it up for SLAM (Simultaneous Localization and Mapping) so that it can explore, understand, and navigate a warehouse-like environment.</p>
+      <p>Later, once the Pi Camera Module 3 (NoIR Wide) arrives, I’ll be integrating YOLOv8 for object detection. That way, Glide X can visually verify if the right product has been picked up before loading.</p>
+      <h4 style="color: #c084fc; margin-top: 1.5rem;">The Mechanism</h4>
+      <p>Apart from just moving around, Glide X will also have an actuator-powered truck bed to lift and lower packages, and a 5-DOF robotic arm to pick, place, or sort items once they’re verified by the camera. This combination allows Glide X to actually handle physical tasks, not just move from point A to B.</p>
+      <h4 style="color: #c084fc; margin-top: 1.5rem;">Control Interface (Web + Kiosk Mode)</h4>
+      <p>The entire system is going to be controlled from a custom web dashboard that I’ll build using Flask and WebSockets. From this dashboard, I’ll be able to:</p>
+      <ul style="color: #e9d5ff; padding-left: 1.2rem;">
+        <li>Trigger product pickup or dispatch routines</li>
+        <li>Monitor live status</li>
+        <li>Manually override control when needed</li>
+        <li>Eventually, even show a live camera feed</li>
+      </ul>
+      <p>In addition to remote control, I’ve added an inbuilt touchscreen mounted directly onto the robot. This allows Glide X to work in a kiosk-like mode, where local staff can interact with it directly — whether to trigger a dispatch, view delivery status, or run a quick diagnostic.</p>
+      <h4 style="color: #c084fc; margin-top: 1.5rem;">What’s Done & What’s Next</h4>
+      <p><strong>Done So Far:</strong></p>
+      <ul style="color: #e9d5ff; padding-left: 1.2rem;">
+        <li>Robot frame assembled with Mecanum wheels</li>
+        <li>Motors and direction logic configured and tested</li>
+        <li>Power system built and stable</li>
+        <li>LiDAR installed and basic SDK setup done</li>
+        <li>GPIO control migrated to gpiozero for better motor handling</li>
+        <li>Touchscreen setup complete for kiosk-style use</li>
+      </ul>
+      <p><strong>Coming Up:</strong></p>
+      <ul style="color: #e9d5ff; padding-left: 1.2rem;">
+        <li>Finalize LiDAR-based SLAM for autonomous navigation</li>
+        <li>Integrate actuator and test truck bed lift</li>
+        <li>Add the 5-DOF robotic arm and start control testing</li>
+        <li>Integrate YOLOv8 for product verification</li>
+        <li>Build the Flask-based dashboard for full remote control</li>
+      </ul>
+      <p>This has been one of the most rewarding builds I’ve worked on. It’s still evolving, but every part I finish brings it closer to being a fully autonomous, AI-powered warehouse assistant. I’ll keep updating this space as more modules go live and Glide X starts rolling into real tests!</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2 style="margin-bottom: 0.5rem;">Crafted with Passion</h2>
+  <p style="font-size: 1rem; font-weight: 400; color: #e9d5ff; text-align: center; margin: 0; text-shadow: 0 0 6px #9333ea;">by</p>
+  <p style="font-size: 1.3rem; font-weight: 600; color: #e9d5ff; text-align: center; margin: 0.3rem 0; text-shadow: 0 0 8px #9333ea;">Sanjit U G</p>
+  <p style="font-size: 1.1rem; font-weight: 500; color: #e9d5ff; text-align: center; text-shadow: 0 0 5px #9333ea;">Robotics & AI Enthusiast</p>
+</footer>
+
+<script>
+  function addJournalEntry() {
+    const input = document.getElementById('journal-input');
+    const container = document.getElementById('journal-container');
+    const text = input.value.trim();
+    if (!text) return;
+    const entry = document.createElement('div');
+    entry.style.padding = '1rem';
+    entry.style.border = '1px solid #9333ea';
+    entry.style.borderRadius = '8px';
+    entry.style.background = '#1a0f2b';
+    entry.innerHTML = `<p style='color: #e9d5ff; margin: 0 0 0.5rem 0;'>${new Date().toLocaleString()}</p><p style='margin: 0;'>${text}</p>`;
+    container.prepend(entry);
+    input.value = '';
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('h2').forEach(h2 => observer.observe(h2));
+</script>

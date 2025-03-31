@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjit U G – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0f;
+      color: #e0d7f8;
+    }
+    header {
+      background: linear-gradient(to right, #6b21a8, #9333ea);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #e9d5ff;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #e9d5ff;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: #1a122d;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(147, 51, 234, 0.1);
+    }
+    h2 {
+      color: #c084fc;
+      border-left: 5px solid #9333ea;
+      padding-left: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .timeline {
+      border-left: 2px solid #9333ea;
+      padding-left: 2rem;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -13px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: #9333ea;
+      border-radius: 50%;
+      border: 3px solid #0a0a0f;
+    }
+    .timeline-item h4 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #f5f3ff;
+    }
+    .timeline-item p {
+      margin: 0.5rem 0 0;
+      color: #d8b4fe;
+    }
+    a {
+      color: #c084fc;
+      text-decoration: none;
+    }
+    .interests p {
+      display: inline-block;
+      background: #3b0764;
+      padding: 0.5rem 1rem;
+      margin: 0.4rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+    }
+    .carousel {
+      text-align: center;
+      padding: 4rem 1rem 6rem;
+    }
+    .carousel-wrapper {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(147, 51, 234, 0.2);
+    }
+    .carousel-slider {
+      position: relative;
+      height: 400px;
+    }
+    .carousel-slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .carousel-slide.active {
+      display: block;
+      animation: fade 1s ease-in-out;
+    }
+    .carousel-slide span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 15, 0.6);
+      color: #fce7f3;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 0 0 24px 24px;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.6rem 1rem;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .nav:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .nav.prev {
+      left: 10px;
+    }
+    .nav.next {
+      right: 10px;
+    }
+    @keyframes fade {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/65LXOXV.jpeg" alt="Sanjit's Profile Picture">
+    <h1>Sanjit U G</h1>
+    <p><em>“Inventing the Future, One Project at a Time”</em></p>
+  </header>
+
+  <section>
+    <h2>Contact</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #9333ea; border-radius: 12px; box-shadow: 0 0 12px rgba(147,51,234,0.3); backdrop-filter: blur(10px);">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-weight: 600; min-width: 80px; color: #d8b4fe;">Email:</span>
+        <a href="mailto:sanjit.ug@gmail.com">sanjit.ug@gmail.com</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-weight: 600; min-width: 80px; color: #d8b4fe;">Phone:</span>
+        <a href="tel:+917397365665">+91 7397365665</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-weight: 600; min-width: 80px; color: #d8b4fe;">Location:</span>
+        <span>Pallavaram, Chennai, Tamil Nadu, India</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Grade X CBSE – Vels Vidyashram Sr. Sec School</h4>
+        <p>2023 – Scored 90% overall with 95% in STEM</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Grade XII CBSE – Vels Vidyashram Sr. Sec School</h4>
+        <p>2025 – Appearing</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Electronic Systems</h4>
+        <p>CODE IIT Madras, 2025</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Graphics & Animation</h4>
+        <p>CSC Computer Education, 2019</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Game Development & UI/UX Design</h4>
+        <p>Whitehat Junior, 2020</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Grumpy – Omnidirectional Robotics Platform</h4>
+        <p>2024 – Built with Raspberry Pi Pico WH. <a href="https://youtu.be/sZM52pviW1w" target="_blank">Watch Demo</a></p>
+      </div>
+      <div class="timeline-item">
+        <h4>GlideX – Autonomous Warehouse Robot</h4>
+        <p>2025 – Finalist in Vivo Ignite. <a href="glidex final.html">Visit Project</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Vivo Ignite Innovation Challenge</h4>
+        <p>Top 200 out of 40,000 – 2025</p>
+      </div>
+      <div class="timeline-item">
+        <h4>World Scholar’s Cup</h4>
+        <p>Silver Medalist – 2022</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Vaels MUN</h4>
+        <p>High Commendation as Romanian Delegate – 2024</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Essay Writing – Independence Day</h4>
+        <p>All India Gold Medal – 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Community Work</h2>
+    <p>Contributed to eco-friendly bag initiative recognized by Asia Book of Records – 2024</p>
+  </section>
+
+  <section class="interests">
+    <h2>Passions & Interests</h2>
+    <p>Robotics</p>
+    <p>Electronics</p>
+    <p>Animation</p>
+    <p>Swimming</p>
+    <p>Western Dance</p>
+    <p>Carnatic Music</p>
+  </section>
+
+  <section class="carousel">
+    <h2>Wanderlust Moments ✈️<br><small style="color:#d8b4fe">Exploring the world, one adventure at a time</small></h2>
+    <div class="carousel-wrapper">
+      <div class="carousel-slider">
+        <div class="carousel-slide active" style="background-image: url('https://i.imgur.com/QNSh5UI.jpeg');">
+          <span>Stonehenge</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/Vp38F4n.jpeg');">
+          <span>Taj Mahal</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/WfnNSNr.jpeg');">
+          <span>Switzerland</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/PczTnlz.jpeg');">
+          <span>London</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/9tcCPTB.jpeg');">
+          <span>Paris</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/FIJTJuQ.jpeg');">
+          <span>Eiffel Tower</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/c6YvjsU.jpeg');">
+          <span>Belgium</span>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://i.imgur.com/IFMw3wL.jpeg');">
+          <span>Paris du Nord</span>
+        </div>
+      </div>
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+    </div>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prev = document.querySelector('.nav.prev');
+    const next = document.querySelector('.nav.next');
+    let index = 0;
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+    next.addEventListener('click', nextSlide);
+    prev.addEventListener('click', prevSlide);
+    setInterval(nextSlide, 3000);
+    showSlide(index);
+  </script>
+</body>
+</html>
